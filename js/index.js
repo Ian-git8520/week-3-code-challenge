@@ -5,6 +5,7 @@ const runtime = document.getElementById("runtime");
 const showtime = document.getElementById("showtime");
 const description = document.getElementById("description");
 const tickets = document.getElementById("ticket-num");
+const filmList = document.getElementById("films")
 const buyBtn = document.getElementById("buy-ticket");
 
 let currentFilm = null;
@@ -25,8 +26,21 @@ function renderFilm(film) {
   const li = document.createElement("li");
   li.textContent = film.title;
   li.addEventListener("click", () => showFilm(film));
-  filmsList.appendChild(li);
-}
+
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
+  deleteBtn.style.marginLeft = "10px";
+  deleteBtn.style.color = "red";
+
+  deleteBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); 
+    deleteFilm(film.id, li);
+  });
+
+  li.appendChild(deleteBtn);
+  filmList.appendChild(li);
+};
+
 
 function showFilm(film) {
   currentFilm = film;
@@ -56,4 +70,10 @@ buyBtn.addEventListener("click", () => {
   } else {
     alert("Sorry, tickets are sold out!");
   }
+
 });
+
+
+
+
+ 

@@ -4,6 +4,11 @@ body {
   margin: 20px;
 }
 
+.heading{
+    color: white;
+    background-color: rgb(27, 26, 26);
+}
+
 #main {
   display: flex;
   gap: 40px;
