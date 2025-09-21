@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fbe1d4;
+  margin: 20px;
+}
+
+#main {
+  display: flex;
+  gap: 40px;
+}
+
+#movie-details {
+  max-width: 400px;
+}
+
+#poster {
+  width: 100%;
+  border-radius: 5px;
+}
+
+#films {
+  list-style: none;
+  padding: 0;
+}
+
+#films li {
+  cursor: pointer;
+  padding: 5px;
+  margin: 3px 0;
+  background: #fff3e6;
+  border-radius: 3px;
+}
+
+#films li:hover {
+  background: #ffd6a5;
+}
